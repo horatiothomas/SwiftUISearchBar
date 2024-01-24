@@ -10,7 +10,7 @@ public struct SearchBar: View {
     
     private let placeholder: String
     
-    init(placeholder: String = "Search") {
+    public init(placeholder: String = "Search") {
         self.placeholder = placeholder
     }
     
