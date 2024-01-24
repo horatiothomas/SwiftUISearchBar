@@ -6,11 +6,17 @@ import SwiftUI
 @available(iOS 13.0, *)
 struct SearchBar: View {
     
-    @Binding var text: String
+    @State var text = ""
+    
+    private let placeholder: String
+    
+    init(placeholder: String = "Search") {
+        self.placeholder = placeholder
+    }
     
     var body: some View {
         HStack {
-            TextField("Search", text: $text)
+            TextField(placeholder, text: $text)
                 .padding(.horizontal)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
@@ -28,5 +34,5 @@ struct SearchBar: View {
 
 @available(iOS 13.0, *)
 #Preview {
-    SearchBar(text: Binding.constant(""))
+    SearchBar()
 }
