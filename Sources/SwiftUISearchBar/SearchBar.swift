@@ -4,7 +4,7 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct SearchBar: View {
+public struct SearchBar: View {
     
     @State var text = ""
     
@@ -14,7 +14,7 @@ struct SearchBar: View {
         self.placeholder = placeholder
     }
     
-    var body: some View {
+    public var body: some View {
         HStack {
             TextField(placeholder, text: $text)
                 .padding(.horizontal)
