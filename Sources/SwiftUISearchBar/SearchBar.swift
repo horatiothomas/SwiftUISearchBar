@@ -6,13 +6,9 @@ import SwiftUI
 @available(iOS 13.0, *)
 public struct SearchBar: View {
     
-    @State public var text = ""
+    @Binding public var text: String
     
-    private let placeholder: String
-    
-    public init(placeholder: String = "Search") {
-        self.placeholder = placeholder
-    }
+    public let placeholder: String
     
     public var body: some View {
         HStack {
@@ -34,5 +30,8 @@ public struct SearchBar: View {
 
 @available(iOS 13.0, *)
 #Preview {
-    SearchBar()
+    SearchBar(
+        text: Binding.constant(""),
+        placeholder: "Search"
+    )
 }
