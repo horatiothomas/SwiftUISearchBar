@@ -6,7 +6,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 public struct SearchBar: View {
     
-    @State var text = ""
+    @State public var text = ""
     
     private let placeholder: String
     
