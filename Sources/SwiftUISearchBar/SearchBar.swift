@@ -8,7 +8,12 @@ public struct SearchBar: View {
     
     @Binding public var text: String
     
-    public let placeholder: String
+    private let placeholder: String
+    
+    public init(text: Binding<String>, placeholder: String) {
+            self._text = text
+            self.placeholder = placeholder
+        }
     
     public var body: some View {
         HStack {
